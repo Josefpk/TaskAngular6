@@ -1,0 +1,30 @@
+<div class="container">
+    <h3>LISTADO DE TAREAS</h3>
+   
+   <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">NOMBRE TAREA</th>
+                <th scope="col">PROYECTO</th>
+                <th scope="col">FECHA</th>
+                <th scope="col">COMENTARIOS</th>
+                <th scope="col">ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let addTask of globals.tasks; let i = index">
+                <td scope="row">{{i + 1}}</td>
+                <td scope="row">{{addTask.nombreTarea}}</td>
+                <td scope="row">{{addTask.proyecto}}</td>
+                <td scope="row">{{addTask.fechaLimite}}</td>
+                <td scope="row">{{addTask.comentarios}}</td>
+                <td scope="row">
+                  <button (click)="removeTask(i)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+  </div>

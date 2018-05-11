@@ -1,0 +1,12 @@
+
+<div>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" [routerLink]="['/logged']" [routerLinkActive]="['activado']">Inicio</a>
+      <a class="navbar-brand" [routerLink]="['/task']" [routerLinkActive]="['activado']">Tasks</a> 
+      <a class="navbar-brand" [routerLink]="['/proyectos']" [routerLinkActive]="['activado']">Proyects</a>
+      <a class="navbar-brand" [routerLink]="['/calendario']" [routerLinkActive]="['activado']">Calendar</a>
+      <a class="navbar-brand" href="#" (click)="onLogOut()">LogOut</a>
+    </nav>
+</div>
+
+

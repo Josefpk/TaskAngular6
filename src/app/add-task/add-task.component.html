@@ -1,0 +1,38 @@
+<div class="form-group" class="container p-4">
+    <form #formAddTask="ngForm" (ngSubmit)="onAddTask() ; formAddTask.reset()">
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Nueva Tarea</label>
+            <div class="col-sm-10">
+                <input type="text" name="nombreTarea" #nombreTarea="ngModel" [(ngModel)]="addTask.nombreTarea" class="form-control" placeholder="New Task"
+                    required>
+                <span *ngIf="nombreTarea.touched && !nombreTarea.valid" style="color: red"> El nombre de la TAREA es incorrecto o vacio.</span>
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Proyecto</label>
+            <div class="col-sm-10">
+                <input type="text" name="proyecto" #proyecto="ngModel" [(ngModel)]="addTask.proyecto" class="form-control" placeholder="New Proyet"
+                    required>
+                <span *ngIf="proyecto.touched && !proyecto.valid" style="color: red"> Las caracteristicas del PROYECTO son incorrectas o vacias.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Fecha Limite</label>
+            <div class="col-sm-10">
+                <input type="date" name="fechaLimite" #fechalimite="ngModel" [(ngModel)]="addTask.fechalimite" class="form-control" placeholder="Deadline"
+                    required>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Comentarios</label>
+            <div class="col-sm-10">
+                <input type="text" name="comentarios" #comentarios="ngModel" [(ngModel)]="addTask.comentarios" class="form-control" class="form-control"
+                    placeholder="Commentary">
+            </div>
+        </div>
+        <input type="submit" value="Agregar Tarea" [disabled]="!formAddTask.form.valid">
+
+    </form>
+</div>
