@@ -26,7 +26,9 @@ export class AddTaskComponent implements OnInit {
     //localStorage.setItem("task", JSON.stringify([{name: "name1", pass: "pass1"}, {name: "name2", pass: "pass2"}])); //localstorage carlos
     //this.addTask.fechaLimite = new Date(this.addTask.fechaLimite);
     this.globals.tasks.push(this.addTask);
+    localStorage.setItem("task", JSON.stringify(this.globals.tasks));
     this.addTask = new AddTask("","", new Date(),"");
+    //ocultar el modal cuando se agregue una tarea. 
     jQuery(".modal").modal("hide");
   }
 }

@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         if (Object.keys(this.globals.current_user).length > 0) {
-            this.router.navigate(["/navegacion"]);
+            this.router.navigate(["/logged"]);
         }
     }
 
