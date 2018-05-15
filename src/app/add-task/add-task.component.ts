@@ -28,6 +28,7 @@ export class AddTaskComponent implements OnInit {
     this.globals.tasks.push(this.addTask);
     localStorage.setItem("task", JSON.stringify(this.globals.tasks));
     this.addTask = new AddTask("","", new Date(),"");
+    this.addTask = JSON.parse(localStorage.getItem("task"));
     //ocultar el modal cuando se agregue una tarea. 
     jQuery(".modal").modal("hide");
   }

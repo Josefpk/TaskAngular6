@@ -15,6 +15,8 @@ import { TasksAddedComponent } from './tasks-added/tasks-added.component';
 import { AddTask } from "./add-task/add-task";
 
 import { Globals } from "./global";
+import { CalendarComponent } from './calendar/calendar.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +26,9 @@ import { Globals } from "./global";
         LoggedComponent,
         TaskComponent,
         AddTaskComponent,
-        TasksAddedComponent
+        TasksAddedComponent,
+        CalendarComponent,
+        ProfileComponent
     ],
     imports: [
         routing,

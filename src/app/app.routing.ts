@@ -7,12 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import { LoggedComponent } from './logged/logged.component';
 import { TaskComponent } from './task/task.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'navegacion', component: NavegacionComponent},
     {path: 'logged', component: LoggedComponent},
     {path: 'task', component:TaskComponent},
+    {path: 'calendar', component:CalendarComponent},
+    {path: 'profile', component:ProfileComponent},
     {path: '**', component: HomeComponent}
 ];
 
